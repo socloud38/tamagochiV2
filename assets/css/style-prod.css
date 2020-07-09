@@ -1,0 +1,12 @@
+body {
+  background-image: url("../imgs/fond2opa50.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.box-template {
+  background-color: rgba(59, 57, 57, 0.616);
+  color: white;
+}
+
+/*# sourceMappingURL=style-prod.css.map */
