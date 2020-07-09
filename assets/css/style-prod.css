@@ -1,12 +1,67 @@
 body {
-  background-image: url("../imgs/fond2opa50.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-}
+  background-color: black; }
+
+.canvas-game {
+  height: 500px;
+  background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle; }
+  .canvas-game p {
+    font-size: 30px; }
 
 .box-template {
   background-color: rgba(59, 57, 57, 0.616);
-  color: white;
-}
+  color: white; }
+
+.my-list {
+  padding-bottom: 50px; }
+
+.my-char {
+  width: 20%;
+  /* Animation css */
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite; }
+
+/* Animation css */
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0); }
+  20%, 80% {
+    transform: translate3d(2px, 0, 0); }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0); }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0); } }
+.my-btn {
+  width: 10%;
+  height: 100%; }
+
+.my-jauges {
+  margin-left: 20px; }
+  .my-jauges img {
+    width: 10%; }
+  .my-jauges .jauges {
+    width: 100%;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: #d30303; }
+
+.my-jauge-xp {
+  padding: 10px; }
+  .my-jauge-xp p {
+    width: 100%;
+    margin-bottom: 0px; }
+  .my-jauge-xp .jauge-xp {
+    width: 100%;
+    height: 20px;
+    margin-bottom: 20px;
+    background-color: #fdfd39; }
+
+.icone-10 {
+  width: 70%; }
 
 /*# sourceMappingURL=style-prod.css.map */

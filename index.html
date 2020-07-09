@@ -1,10 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <title>Title</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/assets/imgs/oeuf-de-yoshi-bleu.png" type="image/x-icon">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -13,30 +14,55 @@
   <body>
       
 
-    <section class="row">
-        <div class="col-12 col-md-6">
-            <img src="assets/imgs/perso1.png" alt="">
-        </div>
-        <div class="col-12 col-md-6 box-template">
-            <H1 class="text-center">Régles du jeu :</H1>
-            <ol>
-                <li class="pt-2"> Il y a 3 besoins pour votre slime, aidez le grâce aux boutons de besoins. </li>
-                <li class="pt-2"> Si les 3 besoins tombe a 0 vous avez perdu !</li>
-                <li class="pt-2"> Occupez-vous bien de votre slime faites attention ! </li>
-            </ol>
+    <section class="">
+        <div class="canvas-game pt-5">
+            <img class="my-char" src="assets/imgs/oeuf-de-yoshi-bleu.png" alt="">
+            <p class="mt-5"> Level : 1</p>
+            <div>
+                <div class="my-jauges d-flex">
+                    <img src="assets/imgs/food.svg" alt="">
+                    <div class="jauges"> <p></p> </div>
+                </div>
+
+                <div class="my-jauges d-flex my-5">
+                    <img src="assets/imgs/water.svg" alt="">
+                    <div class="jauges"> <p></p> </div>
+                </div>
+
+                <div class="my-jauges d-flex">
+                    <img src="assets/imgs/fist.svg" alt="">
+                    <div class="jauges"> <p></p> </div>
+                </div>
+
+                <div class="my-jauge-xp d-flex flex-column">
+                    <p> XP :</p>
+                    <div class="jauge-xp"> <p></p> </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <section>
-        <div class="d-flex box-template mt-5">
-            <h1> Besoins : </h1>
-            <div class="mx-auto">
-                <button class="btn btn-dark"> besoin1 </button>
-                <button class="btn btn-dark"> besoin2 </button>
-                <button class="btn btn-dark"> besoin3 </button>
+        <div class="d-flex box-template py-5">
+            <div class="text-center">
+                <h1 class="pb-3"> Besoins : </h1>
+                <button class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/food.svg" alt=""> </button>
+                <button class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/water.svg" alt=""> </button>
+                <button class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/fist.svg" alt=""> </button>
             </div>
         </div>
     </section>
+
+    <div class="box-template pt-5">
+            <H1 class="text-center">Régles du jeu :</H1>
+            <ul>
+                <li class="pt-2 my-list"> Il y a 3 besoins pour votre slime, aidez le grâce aux boutons de besoins. </li>
+                <li class="pt-2 my-list"> Si les 3 besoins tombe a 0 vous avez perdu !</li>
+                <li class="pt-2 my-list"> Occupez-vous bien de votre slime faites attention ! </li>
+            </ul>
+        </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
