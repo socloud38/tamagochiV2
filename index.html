@@ -14,47 +14,48 @@
   <body>
       
 
-    <section class="">
-        <div class="canvas-game pt-5">
-            <img class="my-char" src="assets/imgs/oeuf-de-yoshi-bleu.png" alt="">
-            <p class="mt-5"> Level : 1</p>
+    <section class="row">
+        <div class="col-12 col-md-6 canvas-game pt-5">
+
+            <div>
+                <img id="mycharr" class="my-char" src="assets/imgs/oeuf-de-yoshi-bleu.png" alt="">
+                <img id="mycharr2" src="assets/imgs/perso1.png" alt="" style="display: none;">
+            </div>
+            
+            <p id="lvltxt" class="mt-5"></p>
             <div>
                 <div class="my-jauges d-flex">
                     <img src="assets/imgs/food.svg" alt="">
-                    <div class="jauges"> <p></p> </div>
+                    <div id="food-jge" class="jauges"> <p id="textfood"></p> </div>
                 </div>
 
                 <div class="my-jauges d-flex my-5">
                     <img src="assets/imgs/water.svg" alt="">
-                    <div class="jauges"> <p></p> </div>
+                    <div id="water-jge" class="jauges"> <p id="textwater"></p> </div>
                 </div>
 
                 <div class="my-jauges d-flex">
                     <img src="assets/imgs/fist.svg" alt="">
-                    <div class="jauges"> <p></p> </div>
+                    <div id="fight-jge" class="jauges"> <p id="textfight"></p> </div>
                 </div>
 
                 <div class="my-jauge-xp d-flex flex-column">
                     <p> XP :</p>
-                    <div class="jauge-xp"> <p></p> </div>
+                    <div id="exp-jge" class="jauge-xp"> <p id="textexp"></p> </div>
                 </div>
 
             </div>
         </div>
-    </section>
 
-    <section>
-        <div class="d-flex box-template py-5">
-            <div class="text-center">
-                <h1 class="pb-3"> Besoins : </h1>
-                <button class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/food.svg" alt=""> </button>
-                <button class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/water.svg" alt=""> </button>
-                <button class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/fist.svg" alt=""> </button>
+        <div class="col-12 col-md-6 box-template pt-2">
+            <div class="d-flex box-template py-5">
+                <div class="text-center mb-5">
+                    <h1 class="pb-3"> Besoins : </h1>
+                    <button id="btn-food" class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/food.svg" alt=""> </button>
+                    <button id="btn-water" class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/water.svg" alt=""> </button>
+                    <button id="btn-fight" class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/fist.svg" alt=""> </button>
+                </div>
             </div>
-        </div>
-    </section>
-
-    <div class="box-template pt-5">
             <H1 class="text-center">Régles du jeu :</H1>
             <ul>
                 <li class="pt-2 my-list"> Il y a 3 besoins pour votre slime, aidez le grâce aux boutons de besoins. </li>
@@ -62,6 +63,13 @@
                 <li class="pt-2 my-list"> Occupez-vous bien de votre slime faites attention ! </li>
             </ul>
         </div>
+    </section>
+
+    <section>
+        
+    </section>
+
+    
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

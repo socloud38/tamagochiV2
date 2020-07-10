@@ -1,9 +1,9 @@
 body {
-  background-color: black; }
+  background-color: white; }
 
 .canvas-game {
-  height: 500px;
-  background-color: rgba(255, 255, 255, 0.5);
+  height: 740px;
+  background-color: rgba(146, 76, 76, 0.623);
   text-align: center;
   display: table-cell;
   vertical-align: middle; }
@@ -45,7 +45,6 @@ body {
   .my-jauges img {
     width: 10%; }
   .my-jauges .jauges {
-    width: 100%;
     margin-right: 10px;
     margin-left: 10px;
     background-color: #d30303; }
