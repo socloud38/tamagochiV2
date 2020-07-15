@@ -1,21 +1,51 @@
 body {
-  background-color: white; }
+  background-image: url(../imgs/fond01.jpg);
+  user-select: none;
+}
+
+.bg-fond {
+  height: 637px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bg-fond2 {
+  height: 600px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 0, 128, 0.7);
+}
+
+.clique-txt {
+  color: white;
+  font-size: 30px;
+}
 
 .canvas-game {
   height: 740px;
-  background-color: rgba(146, 76, 76, 0.623);
+  background-color: rgba(0, 0, 0, 0.623);
   text-align: center;
   display: table-cell;
-  vertical-align: middle; }
-  .canvas-game p {
-    font-size: 30px; }
+  vertical-align: middle;
+  color: white;
+}
+.canvas-game p {
+  font-size: 30px;
+}
 
 .box-template {
   background-color: rgba(59, 57, 57, 0.616);
-  color: white; }
+  color: white;
+}
 
 .my-list {
-  padding-bottom: 50px; }
+  padding-bottom: 50px;
+}
 
 .my-char {
   width: 20%;
@@ -24,43 +54,65 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
-  animation-iteration-count: infinite; }
+  animation-iteration-count: infinite;
+}
 
 /* Animation css */
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0); }
+    transform: translate3d(-1px, 0, 0);
+  }
   20%, 80% {
-    transform: translate3d(2px, 0, 0); }
+    transform: translate3d(2px, 0, 0);
+  }
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0); }
+    transform: translate3d(-4px, 0, 0);
+  }
   40%, 60% {
-    transform: translate3d(4px, 0, 0); } }
+    transform: translate3d(4px, 0, 0);
+  }
+}
 .my-btn {
   width: 10%;
-  height: 100%; }
+  height: 100%;
+  background-image: url(../imgs/fond01.jpg);
+}
+.my-btn:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
 
 .my-jauges {
-  margin-left: 20px; }
-  .my-jauges img {
-    width: 10%; }
-  .my-jauges .jauges {
-    margin-right: 10px;
-    margin-left: 10px;
-    background-color: #d30303; }
+  margin-left: 20px;
+}
+.my-jauges img {
+  width: 10%;
+}
+.my-jauges .jauges {
+  margin-right: 10px;
+  margin-left: 10px;
+  background-image: url(../imgs/texturebesoin.jpg);
+  background-position: center;
+  background-size: cover;
+}
 
 .my-jauge-xp {
-  padding: 10px; }
-  .my-jauge-xp p {
-    width: 100%;
-    margin-bottom: 0px; }
-  .my-jauge-xp .jauge-xp {
-    width: 100%;
-    height: 20px;
-    margin-bottom: 20px;
-    background-color: #fdfd39; }
+  padding: 10px;
+}
+.my-jauge-xp p {
+  width: 100%;
+  margin-bottom: 0px;
+  font-size: 16px;
+  color: black;
+}
+.my-jauge-xp .jauge-xp {
+  width: 100%;
+  height: 20px;
+  margin-bottom: 20px;
+  background-image: url(../imgs/texturexp.webp);
+}
 
 .icone-10 {
-  width: 70%; }
+  width: 70%;
+}
 
 /*# sourceMappingURL=style-prod.css.map */

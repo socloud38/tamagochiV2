@@ -20,16 +20,23 @@ let expprcjauge = 8;
 // var int
 let levels = 0;
 
+// var strings
+let myname = '';
+
 //var personnages
+let mynametxt = document.getElementById('nametxt')
 let mychar = document.getElementById('mycharr');
 let mychar2 = document.getElementById('mycharr2');
-mychar2.hidden = false;
+let mychar3 = document.getElementById('mycharr3');
+let mychar4 = document.getElementById('mycharr4');
 
 // fonction manager des jauges
 foodjaugesmanage();
 waterjaugesmanage();
 fightjaugesmanage();
 expjaugmanage();
+
+mynametxt.innerText = myname;
 
 // fonctions qui test les pourcentages des jauges et gère les width en fonction
 function foodjaugesmanage()
@@ -284,16 +291,30 @@ function lvlup()
     {
         levels ++;
         expprcjauge = 0;
-        if(levels === 1)
-        {
-            mychar.hidden = true;
-            mychar2.style.display = "inline-block";
+        expjauge.style.width = 0 + '%';
+        exptxt.innerText = expprcjauge * 10 + '%';
+        switch (levels) {
+            case 1:
+                mychar.hidden = true;
+                mychar2.style.display = "inline-block";
+                break;
+            case 2:
+                mychar2.style.display = "none";
+                mychar3.style.display = "inline-block";
+                break;
+            case 3:
+                mychar3.style.display = "none";
+                mychar4.style.display = "inline-block";
+                break;
+                    
+            default:
+                break;
         }
     }
 }
 
 
-// applique la baisse du pourcentage toute les 3secondes
+// applique la baisse du pourcentage toute les "x" secondes
 let foodtimer = window.setInterval(function() {
     foodprcjauge--;
     foodjaugesmanage();
@@ -312,8 +333,11 @@ let fighttimer = window.setInterval(function() {
 let exptimer = window.setInterval(function() {
     expprcjauge++;
     expjaugmanage()
-    lvlup()
 }, 5000)
+// comme un Update() en C# (s'actualise toute les secondes)
+let updatetimer = window.setInterval(function(){
+    lvlup()
+},)
 
 // var de mes boutons besoins
 let foodbtn = document.getElementById('btn-food');
