@@ -18,4 +18,5 @@ eggcont2.addEventListener('click', function(event){
 
     myname = eggcont1.value;
     localStorage.setItem('name', myname.toString());
+    window.location = 'game.html';
 })

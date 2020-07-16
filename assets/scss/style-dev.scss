@@ -1,7 +1,12 @@
+@import url(//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold);
+
+@font-face {font-family: "BeaufortforLOL-Bold"; src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot"); src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); } 
+
 body 
 {
     background-image: url(../imgs/fond01.jpg);
     user-select: none;
+    font-family: "BeaufortforLOL-Bold";
 }
 
 // Css index
@@ -12,7 +17,6 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .bg-fond2
@@ -23,7 +27,12 @@ body
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: rgba(128, 0, 128, 0.7);
+    border: 3px solid rgb(70, 0, 70);
+    border-radius: 30%;
+    background-image: url(../imgs/mini-legend-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 .clique-txt
@@ -102,6 +111,14 @@ body
     }
 }
 
+.bg-jauges
+{
+    height: 20px;
+    background-color: black;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
 .my-jauges
 {
     margin-left: 20px;
@@ -112,8 +129,11 @@ body
 
     .jauges 
     {
+        transition: 2s;
         margin-right: 10px;
         margin-left: 10px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
         background-image: url(../imgs/texturebesoin.jpg);
         background-position:center;
         background-size: cover;
@@ -135,6 +155,9 @@ body
     {
         width: 100%;
         height: 20px;
+        transition: 2s;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
         margin-bottom: 20px;
         background-image: url(../imgs/texturexp.webp);
     }
@@ -143,4 +166,39 @@ body
 .icone-10
 {
     width: 70%;
+}
+
+// Css defeatscreen
+
+.bg-defeat
+{
+    height: 637px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-defeat-2
+{
+    height: 500px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../imgs/mini-legend-bg.jpg);
+    border-radius: 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    img 
+    {
+        rotate: 90deg;
+    }
+
+    h2
+    {
+        color: white;
+    }
 }

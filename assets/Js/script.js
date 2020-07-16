@@ -19,9 +19,10 @@ let expprcjauge = 8;
 
 // var int
 let levels = 0;
+let evolve = 0;
 
 // var strings
-let myname = '';
+let myname = localStorage.getItem('name');
 
 //var personnages
 let mynametxt = document.getElementById('nametxt')
@@ -36,6 +37,7 @@ waterjaugesmanage();
 fightjaugesmanage();
 expjaugmanage();
 
+console.log(myname);
 mynametxt.innerText = myname;
 
 // fonctions qui test les pourcentages des jauges et gère les width en fonction
@@ -218,57 +220,57 @@ function expjaugmanage()
     if(expprcjauge === 10)
     {
         expjauge.style.width = 100 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 9)
     {
         expjauge.style.width = 90 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 8)
     {
         expjauge.style.width = 80 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 7)
     {
         expjauge.style.width = 70 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 6)
     {
         expjauge.style.width = 60 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 5)
     {
         expjauge.style.width = 50 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 4)
     {
         expjauge.style.width = 40 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 3)
     {
         expjauge.style.width = 30 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 2)
     {
         expjauge.style.width = 20 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
     else if(expprcjauge === 1)
     {
         expjauge.style.width = 10 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
-    else if(expprcjauge == 0)
+    else if(expprcjauge === 0)
     {
         expjauge.style.width = 0 + '%';
-        exptxt.innerText = expprcjauge * 10 + '%';
+        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
 }
 // function qui test si les jauges sont vide pour définir la defaite du joueur
@@ -276,11 +278,8 @@ function defeat()
 {
     if(foodprcjauge <= 0 && waterprcjauge <= 0 && fightprcjauge <= 0)
     {
-        alert('DEFEAT');
-        clearInterval(foodtimer);
-        clearInterval(watertimer);
-        clearInterval(fighttimer);
-        clearInterval(exptimer);
+        localStorage.setItem('evolve', evolve);
+        window.location = 'defeat.html';
     }
 }
 // function qui test si la barre d'exp est pleine, si oui level up
@@ -297,14 +296,17 @@ function lvlup()
             case 1:
                 mychar.hidden = true;
                 mychar2.style.display = "inline-block";
+                evolve = 1;
                 break;
-            case 2:
+            case 5:
                 mychar2.style.display = "none";
                 mychar3.style.display = "inline-block";
+                evolve = 2;
                 break;
-            case 3:
+            case 10:
                 mychar3.style.display = "none";
                 mychar4.style.display = "inline-block";
+                evolve = 3;
                 break;
                     
             default:
@@ -330,14 +332,10 @@ let fighttimer = window.setInterval(function() {
     fightjaugesmanage();
     defeat()
 }, 4000)
-let exptimer = window.setInterval(function() {
-    expprcjauge++;
-    expjaugmanage()
-}, 5000)
 // comme un Update() en C# (s'actualise toute les secondes)
 let updatetimer = window.setInterval(function(){
     lvlup()
-},)
+})
 
 // var de mes boutons besoins
 let foodbtn = document.getElementById('btn-food');
@@ -348,38 +346,77 @@ let fightbtn = document.getElementById('btn-fight');
 foodbtn.addEventListener('click', function(event){
     foodprcjauge ++;
     foodjaugesmanage();
-    if(foodprcjauge >= 10)
+    if(foodprcjauge > 10)
     {
         foodprcjauge = 10;
     }
-    else if(foodprcjauge < 0)
+    else if(foodprcjauge <= 0)
     {
         foodprcjauge = 0;
+    }
+    else if (foodprcjauge < 10 || foodprcjauge > 0 )
+    {
+        expprcjauge += 0.5;
+        expjaugmanage();
+    }
+    if(expprcjauge > -1 && expprcjauge < 1)
+    {
+        exptxt.style.color = 'white';
+    }
+    else
+    {
+        exptxt.style.color = 'black';
     }
 })
 
 waterbtn.addEventListener('click', function(event){
     waterprcjauge ++;
     waterjaugesmanage();
-    if(waterprcjauge >= 10)
+    if(waterprcjauge > 10)
     {
         waterprcjauge = 10;
     }
-    else if(waterprcjauge < 0)
+    else if(waterprcjauge <= 0)
     {
         waterprcjauge = 0;
+    }
+    else if (waterprcjauge < 10 || waterprcjauge > 0 )
+    {
+        expprcjauge += 0.5;
+        expjaugmanage();
+    }
+    if(expprcjauge > -1 && expprcjauge < 1)
+    {
+        exptxt.style.color = 'white';
+    }
+    else
+    {
+        exptxt.style.color = 'black';
     }
 })
 
 fightbtn.addEventListener('click', function(event){
     fightprcjauge ++;
     fightjaugesmanage();
-    if(fightprcjauge >= 10)
+    if(fightprcjauge > 10)
     {
         fightprcjauge = 10;
     }
-    else if(fightprcjauge < 0)
+    else if(fightprcjauge <= 0)
     {
         fightprcjauge = 0;
+    }
+    else if (fightprcjauge < 10 || fightprcjauge > 0 )
+    {
+        expprcjauge += 0.5;
+        expjaugmanage();
+    }
+    if(expprcjauge > -1 && expprcjauge < 1)
+    {
+        exptxt.style.color = 'white';
+    }
+    else
+    {
+        exptxt.style.color = 'black';
     }
 })
