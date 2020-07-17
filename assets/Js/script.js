@@ -342,8 +342,18 @@ let foodbtn = document.getElementById('btn-food');
 let waterbtn = document.getElementById('btn-water');
 let fightbtn = document.getElementById('btn-fight');
 
-//event click augmente la jauge par les var prcjauges
-foodbtn.addEventListener('click', function(event){
+//var console
+let mybtnconsole = document.getElementById('btn-console');
+//var div de ma console
+let myconsole = document.getElementById('my-console');
+//var content besoins
+let besoinbtn = document.getElementById('content-besoins');
+
+//var bool
+let consolestats = false;
+
+function foodadd()
+{
     foodprcjauge ++;
     foodjaugesmanage();
     if(foodprcjauge > 10)
@@ -367,9 +377,15 @@ foodbtn.addEventListener('click', function(event){
     {
         exptxt.style.color = 'black';
     }
+
+}
+//event click augmente la jauge par les var prcjauges
+foodbtn.addEventListener('click', function(event){
+    foodadd();
 })
 
-waterbtn.addEventListener('click', function(event){
+function wateradd()
+{
     waterprcjauge ++;
     waterjaugesmanage();
     if(waterprcjauge > 10)
@@ -393,9 +409,15 @@ waterbtn.addEventListener('click', function(event){
     {
         exptxt.style.color = 'black';
     }
+
+}
+
+waterbtn.addEventListener('click', function(event){
+    wateradd();
 })
 
-fightbtn.addEventListener('click', function(event){
+function fightadd()
+{
     fightprcjauge ++;
     fightjaugesmanage();
     if(fightprcjauge > 10)
@@ -418,5 +440,103 @@ fightbtn.addEventListener('click', function(event){
     else
     {
         exptxt.style.color = 'black';
+    }
+
+}
+
+fightbtn.addEventListener('click', function(event){
+    fightadd();
+})
+
+mybtnconsole.addEventListener('click', function(event){
+
+    if(consolestats === false)
+    {
+        besoinbtn.style.display = 'none';
+        myconsole.style.display = 'inline-block';
+        consolestats = !consolestats;
+        mybtnconsole.innerText = 'Mode Boutons'
+    }
+    else if(consolestats === true)
+    {
+        besoinbtn.style.display = 'inline-block';
+        myconsole.style.display = 'none';
+        consolestats = !consolestats;
+        mybtnconsole.innerText = 'Mode Console'
+    }
+})
+
+
+//var du txt dans la console (commande déja tapé)
+let txtcsl = document.getElementById('my-txt-console');
+
+//var de l'input de la console
+let inputcsl = document.getElementById('my-input-csl');
+//event de l'input console
+inputcsl.addEventListener('keydown', function(event){
+    if(event.keyCode === 13){
+        let inputvalue = inputcsl.value.toString();
+        console.log(inputvalue);
+
+        if(inputvalue === '/eat')
+        {
+            foodadd();
+            if(foodprcjauge >= 10)
+            {
+                let cmdtxt = document.createElement('p');
+                cmdtxt.innerText = 'le ventre de votre mini-legend est plein';
+                txtcsl.append(cmdtxt);
+            }
+            else 
+            {
+                let cmdtxt = document.createElement('p');
+                cmdtxt.innerText = '/eat';
+                txtcsl.append(cmdtxt);
+            }
+        }
+        else if(inputvalue === '/drink')
+        {
+            wateradd();
+            if(waterprcjauge >= 10)
+            {
+                let cmdtxt = document.createElement('p');
+                cmdtxt.innerText = "Votre mini-legend n'a plus soif";
+                txtcsl.append(cmdtxt);
+            }
+            else 
+            {
+                let cmdtxt = document.createElement('p');
+                cmdtxt.innerText = '/drink';
+                txtcsl.append(cmdtxt);
+            }
+        }
+        else if(inputvalue === '/fight')
+        {
+            fightadd();
+            if(fightprcjauge >= 10)
+            {
+                let cmdtxt = document.createElement('p');
+                cmdtxt.innerText = "votre mini-legend n'a plus envie de se battre";
+                txtcsl.append(cmdtxt);
+            }
+            else 
+            {
+                let cmdtxt = document.createElement('p');
+                cmdtxt.innerText = '/fight';
+                txtcsl.append(cmdtxt);
+            }
+        }
+        else if (inputvalue === '/help')
+        {
+            let cmdtxt = document.createElement('p');
+            cmdtxt.innerHTML = "<p>/eat pour manger !</p> <p>/drink pour boire !</p> <p>/fight pour se battre !</p>";
+            txtcsl.append(cmdtxt);
+        }
+        else
+        {
+            let cmdtxt = document.createElement('p');
+            cmdtxt.innerText = 'Command not found...';
+            txtcsl.append(cmdtxt);
+        }
     }
 })

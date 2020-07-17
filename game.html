@@ -31,17 +31,17 @@
             <div>
                 <div class="my-jauges d-flex">
                     <img src="assets/imgs/food.svg" alt="">
-                    <div id="food-jge" class="jauges"> <p id="textfood"></p> </div>
+                    <div class="bg-jauges2"><div id="food-jge" class="jauges"> <p id="textfood"></p> </div></div>
                 </div>
 
                 <div class="my-jauges d-flex my-5">
                     <img src="assets/imgs/water.svg" alt="">
-                    <div id="water-jge" class="jauges"> <p id="textwater"></p> </div>
+                    <div class="bg-jauges2"><div id="water-jge" class="jauges"> <p id="textwater"></p> </div></div>
                 </div>
 
                 <div class="my-jauges d-flex">
                     <img src="assets/imgs/fist.svg" alt="">
-                    <div id="fight-jge" class="jauges"> <p id="textfight"></p> </div>
+                    <div class="bg-jauges2"><div id="fight-jge" class="jauges"> <p id="textfight"></p> </div></div>
                 </div>
 
                 <div class="my-jauge-xp d-flex flex-column">
@@ -53,12 +53,21 @@
 
         <div class="col-12 col-md-6 box-template pt-2">
             <div class="d-flex box-template py-5">
-                <div class="text-center mb-5">
+                <div id="content-besoins" class="text-center mb-5">
                     <h1 class="pb-3"> Besoins : </h1>
                     <button id="btn-food" class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/food.svg" alt=""> </button>
                     <button id="btn-water" class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/water.svg" alt=""> </button>
                     <button id="btn-fight" class="my-btn btn btn-dark"> <img class="icone-10" src="assets/imgs/fist.svg" alt=""> </button>
                 </div>
+            <div id="my-console" class="w-100" style="display: none;">
+                <div class="my-console d-flex flex-column justify-content-end">
+                    <div id="my-txt-console">
+
+                    </div>
+                    <input id="my-input-csl" class="my-input-csl" type="text" placeholder="vos commandes...">
+                </div>
+            </div>
+                <div><button id="btn-console">Mode Console</button></div>
             </div>
             <H1 class="text-center">Régles du jeu :</H1>
             <ul>
