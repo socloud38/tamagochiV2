@@ -37,6 +37,22 @@ body {
   font-size: 30px;
 }
 
+.my-perso-btn {
+  width: 150px;
+  font-size: 25px;
+  background-color: #7474fd;
+  border: 2px solid blue;
+  border-top-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  transition: 0.5s;
+}
+.my-perso-btn:hover {
+  background-color: blue;
+  color: white;
+  border-top-left-radius: 0%;
+  border-bottom-right-radius: 0%;
+}
+
 .canvas-game {
   height: 740px;
   background-color: rgba(0, 0, 0, 0.623);
