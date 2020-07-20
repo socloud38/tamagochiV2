@@ -7,6 +7,7 @@ let btnegg = document.getElementById('eggclick');
 let eggcont1 = document.getElementById('eggcontent1');
 let eggcont2 = document.getElementById('eggcontent2');
 let eggcont3 = document.getElementById('txtegg');
+let cslalerte = document.getElementById('console-alerte');
 
 btnegg.addEventListener('click', function(event){
     eggcont1.style.display = 'inline-block';
@@ -16,7 +17,60 @@ btnegg.addEventListener('click', function(event){
 
 eggcont2.addEventListener('click', function(event){
 
-    myname = eggcont1.value;
-    localStorage.setItem('name', myname.toString());
-    window.location = 'game.html';
+    if(eggcont1.value)
+    {
+        myname = eggcont1.value;
+        localStorage.setItem('name', myname.toString());
+        eggcont1.value = '';
+        window.location = 'game.html';
+    }/* 
+    else 
+    {
+        let textappend = true;
+
+        setInterval(() => {
+    
+            if(textappend)
+            {
+                let alertee = document.createElement('span');
+                alertee.innerText = 'Veuillez entrer un nom !';
+                cslalerte.append(alertee);
+                textappend = !textappend;
+                return textappend;
+            }
+            if(!textappend)
+            {
+                cslalerte.innerHTML = '';
+                textappend = !textappend;
+                return textappend;
+            }
+        
+        }, 500);
+
+    } */
 })
+
+shrinktxt();
+
+function shrinktxt()
+{
+    let shrinktxt = true;
+    
+    setInterval(() => {
+    
+        if(shrinktxt)
+        {
+            eggcont1.placeholder = '';
+            shrinktxt = !shrinktxt;
+            return shrinktxt;
+        }
+        if(!shrinktxt)
+        {
+            eggcont1.placeholder = 'Choisissez un nom !';
+            shrinktxt = !shrinktxt;
+            return shrinktxt;
+        }
+    
+    }, 500);
+
+}
