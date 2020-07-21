@@ -45,6 +45,12 @@ body {
   border-bottom-right-radius: 40%;
 }
 
+.clique-txt2 {
+  padding-bottom: 10px;
+  color: white;
+  font-size: 25px;
+}
+
 .my-perso-btn {
   width: 150px;
   font-size: 25px;

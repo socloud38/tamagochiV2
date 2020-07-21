@@ -7,12 +7,14 @@ let btnegg = document.getElementById('eggclick');
 let eggcont1 = document.getElementById('eggcontent1');
 let eggcont2 = document.getElementById('eggcontent2');
 let eggcont3 = document.getElementById('txtegg');
+let eggcont4 = document.getElementById('txtegg2');
 let cslalerte = document.getElementById('console-alerte');
 
 btnegg.addEventListener('click', function(event){
     eggcont1.style.display = 'inline-block';
     eggcont2.style.display = 'inline-block';
     eggcont3.style.display = 'none';
+    eggcont4.style.display = 'none';
 })
 
 eggcont2.addEventListener('click', function(event){
@@ -23,31 +25,12 @@ eggcont2.addEventListener('click', function(event){
         localStorage.setItem('name', myname.toString());
         eggcont1.value = '';
         window.location = 'game.html';
-    }/* 
+    }
     else 
     {
-        let textappend = true;
-
-        setInterval(() => {
-    
-            if(textappend)
-            {
-                let alertee = document.createElement('span');
-                alertee.innerText = 'Veuillez entrer un nom !';
-                cslalerte.append(alertee);
-                textappend = !textappend;
-                return textappend;
-            }
-            if(!textappend)
-            {
-                cslalerte.innerHTML = '';
-                textappend = !textappend;
-                return textappend;
-            }
-        
-        }, 500);
-
-    } */
+        let alertee = document.getElementById('my-span');
+        alertee.innerText = 'Veuillez entrer un nom !';
+    }
 })
 
 shrinktxt();
