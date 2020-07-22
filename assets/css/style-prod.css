@@ -2,20 +2,17 @@
 @font-face {
   font-family: "BeaufortforLOL-Bold";
   src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot");
-  src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg");
-}
+  src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); }
 body {
   background-image: url(../imgs/fond01.jpg);
   user-select: none;
-  font-family: "BeaufortforLOL-Bold";
-}
+  font-family: "BeaufortforLOL-Bold"; }
 
 .bg-fond {
   height: 637px;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
 
 .bg-fond2 {
   height: 600px;
@@ -29,12 +26,10 @@ body {
   background-image: url(../imgs/mini-legend-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
-}
+  background-position: center; }
 
 #console-alerte span {
-  color: red;
-}
+  color: red; }
 
 .clique-txt {
   padding-bottom: 10px;
@@ -42,14 +37,12 @@ body {
   font-size: 30px;
   border-bottom: 2px solid white;
   border-top-left-radius: 40%;
-  border-bottom-right-radius: 40%;
-}
+  border-bottom-right-radius: 40%; }
 
 .clique-txt2 {
   padding-bottom: 10px;
   color: white;
-  font-size: 25px;
-}
+  font-size: 25px; }
 
 .my-perso-btn {
   width: 150px;
@@ -58,15 +51,13 @@ body {
   border: 2px solid blue;
   border-top-left-radius: 40%;
   border-bottom-right-radius: 40%;
-  transition: 0.5s;
-}
-.my-perso-btn:hover {
-  background-color: blue;
-  color: white;
-  font-size: 30px;
-  border-top-left-radius: 0%;
-  border-bottom-right-radius: 0%;
-}
+  transition: 0.5s; }
+  .my-perso-btn:hover {
+    background-color: blue;
+    color: white;
+    font-size: 30px;
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%; }
 
 #eggclick {
   /* Animation css */
@@ -74,23 +65,20 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
 
 .my-perso-input {
   font-size: 25px;
   text-align: center;
   border: 2px solid blue;
-  background-color: #7474fd;
-}
-.my-perso-input:focus {
-  background-color: blue;
-  border: 2px solid blue;
-  color: white;
-  font-size: 25px;
-  text-align: center;
-  box-shadow: 0px 0px 15px 5px blue;
-}
+  background-color: #7474fd; }
+  .my-perso-input:focus {
+    background-color: blue;
+    border: 2px solid blue;
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    box-shadow: 0px 0px 15px 5px blue; }
 
 .canvas-game {
   height: 740px;
@@ -98,20 +86,16 @@ body {
   text-align: center;
   display: table-cell;
   vertical-align: middle;
-  color: white;
-}
-.canvas-game p {
-  font-size: 30px;
-}
+  color: white; }
+  .canvas-game p {
+    font-size: 30px; }
 
 .box-template {
   background-color: rgba(59, 57, 57, 0.616);
-  color: white;
-}
+  color: white; }
 
 .my-list {
-  padding-bottom: 50px;
-}
+  padding-bottom: 50px; }
 
 .my-char {
   width: 20%;
@@ -120,139 +104,119 @@ body {
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
-  animation-iteration-count: infinite;
-}
+  animation-iteration-count: infinite; }
 
 /* Animation css */
 @keyframes shake {
   10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }
+    transform: translate3d(-1px, 0, 0); }
   20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
+    transform: translate3d(2px, 0, 0); }
   30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
+    transform: translate3d(-4px, 0, 0); }
   40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
-}
+    transform: translate3d(4px, 0, 0); } }
 .my-btn {
   width: 10%;
   height: 100%;
-  background-image: url(../imgs/fond01.jpg);
-}
-.my-btn:hover {
-  background: rgba(0, 0, 0, 0.5);
-}
+  background-image: url(../imgs/fond01.jpg); }
+  .my-btn:hover {
+    background: rgba(0, 0, 0, 0.5); }
 
 .my-console {
   width: 100%;
   height: 200px;
   background-color: black;
-  overflow: hidden;
-}
-.my-console p {
-  color: #474747;
-  margin: 0px;
-  font-size: 12px;
-}
+  overflow: hidden; }
+  .my-console p {
+    color: #474747;
+    margin: 0px;
+    font-size: 12px; }
 
 .my-input-csl {
   background-color: #363636;
   border: 2px solid #363636;
-  color: white;
-}
-.my-input-csl:hover {
-  background-color: rgba(54, 54, 54, 0.5);
-}
+  color: white; }
+  .my-input-csl:hover {
+    background-color: rgba(54, 54, 54, 0.5); }
 
 #btn-console {
   position: absolute;
-  right: 10px;
-}
+  right: 10px; }
 
 .bg-jauges {
   height: 20px;
-  background-color: black;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
   border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
+  border-bottom-right-radius: 100px; }
 
 .bg-jauges2 {
   height: 45px;
   width: 100%;
-  background-color: black;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
   border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-}
+  border-bottom-right-radius: 100px; }
 
 .my-jauges {
   margin-left: 20px;
-}
-.my-jauges img {
-  width: 10%;
-}
-.my-jauges .jauges {
-  transition: 2s;
-  margin-right: 10px;
-  margin-left: 10px;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-  background-image: url(../imgs/texturebesoin.jpg);
-  background-position: center;
-  background-size: cover;
-}
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .my-jauges img {
+    width: 10%; }
+  .my-jauges .jauges {
+    transition: 2s;
+    margin-right: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-image: url(../imgs/texturebesoin.jpg);
+    background-position: center;
+    background-size: cover; }
 
 .my-jauge-xp {
-  padding: 10px;
-}
-.my-jauge-xp p {
-  width: 100%;
-  margin-bottom: 0px;
-  font-size: 16px;
-  color: black;
-}
-.my-jauge-xp .jauge-xp {
-  width: 100%;
-  height: 20px;
-  transition: 2s;
-  border-top-right-radius: 100px;
-  border-bottom-right-radius: 100px;
-  margin-bottom: 20px;
-  background-image: url(../imgs/texturexp.webp);
-}
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .my-jauge-xp img {
+    width: 10%; }
+  .my-jauge-xp p {
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 16px;
+    color: black; }
+  .my-jauge-xp .jauge-xp {
+    width: 100%;
+    height: 20px;
+    transition: 2s;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    margin-bottom: 20px;
+    background-image: url(../imgs/texturexp.webp); }
 
 .icone-10 {
-  width: 70%;
-}
+  width: 70%; }
 
 .bg-defeat {
   height: 637px;
   background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center; }
+  .bg-defeat h2 {
+    color: white; }
 
 .bg-defeat-2 {
-  height: 500px;
-  width: 50%;
+  height: 300px;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url(../imgs/mini-legend-bg.jpg);
-  border-radius: 25%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-}
-.bg-defeat-2 img {
-  rotate: 90deg;
-}
-.bg-defeat-2 h2 {
-  color: white;
-}
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25%; }
+  .bg-defeat-2 img {
+    margin-left: 80px; }
 
 /*# sourceMappingURL=style-prod.css.map */

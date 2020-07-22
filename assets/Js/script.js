@@ -71,59 +71,9 @@ function fightjaugesmanage()
 }
 function expjaugmanage()
 {
-    if(expprcjauge === 10)
+    if (expprcjauge <= 10 && expprcjauge >= 0)
     {
-        expjauge.style.width = 100 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 9)
-    {
-        expjauge.style.width = 90 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 8)
-    {
-        expjauge.style.width = 80 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 7)
-    {
-        expjauge.style.width = 70 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 6)
-    {
-        expjauge.style.width = 60 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 5)
-    {
-        expjauge.style.width = 50 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 4)
-    {
-        expjauge.style.width = 40 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 3)
-    {
-        expjauge.style.width = 30 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 2)
-    {
-        expjauge.style.width = 20 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 1)
-    {
-        expjauge.style.width = 10 + '%';
-        exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
-    }
-    else if(expprcjauge === 0)
-    {
-        expjauge.style.width = 0 + '%';
+        expjauge.style.width = (expprcjauge * 10) + '%';
         exptxt.innerText = 'XP : ' + expprcjauge * 10 + '%';
     }
 }
@@ -417,23 +367,23 @@ inputcsl.addEventListener('keydown', function(event){
         else if (inputvalue === '/help')
         {
             let cmdtxt = document.createElement('p');
-            cmdtxt.innerHTML = "<p>/eat pour manger !</p> <p>/drink pour boire !</p> <p>/fight pour se battre !</p><p> /godmod pour être invicible !</p>";
+            cmdtxt.innerHTML = "<p>/eat pour manger !</p> <p>/drink pour boire !</p> <p>/fight pour se battre !</p><p> /pause pour être invicible !</p>";
             txtcsl.append(cmdtxt);
         }
         // si l'input est '/godmod'
-        else if(inputvalue === '/godmod')
+        else if(inputvalue === '/pause')
         {
             pause = !pause;
             if(!pause)
             {
                 let cmdtxt = document.createElement('p');
-                cmdtxt.innerText = "/godmod vous-n'etes plus invincible !";
+                cmdtxt.innerText = "/pause vous-n'etes plus invincible !";
                 txtcsl.append(cmdtxt);
             }
             else 
             {
                 let cmdtxt = document.createElement('p');
-                cmdtxt.innerText = '/godmod vous-etes invincible !';
+                cmdtxt.innerText = '/pause vous-etes invincible !';
                 txtcsl.append(cmdtxt);
             }
         }

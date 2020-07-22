@@ -1,8 +1,13 @@
 let char = JSON.parse(localStorage.getItem('evolve'));
 
+let name = localStorage.getItem('name');
+let deathtxt = document.getElementById('defeat-txt');
+
 let charimg1 = document.getElementById('mycharr2');
 let charimg2 = document.getElementById('mycharr3');
 let charimg3 = document.getElementById('mycharr4');
+
+deathtxt.innerHTML = `<span style="font-weight: bold;">"${name}"</span> est mort`;
 
 if(char === 2)
 {
