@@ -41,6 +41,49 @@ waterjaugesmanage();
 fightjaugesmanage();
 expjaugmanage();
 
+//var audio
+let myaudio = document.getElementById('my-audio');
+let myspeakerbtn = document.getElementById('speaker-btn');
+let mymutebtn = document.getElementById('mute-btn');
+let myslider = document.getElementById('my-slider');
+let myslidertxt = document.getElementById('slider-txt');
+let soundok = true;
+
+myslider.value = 20;
+
+
+function audioplay()
+{
+    if(myslider.value <= 100 && myslider.value >= 0)
+    {
+        myaudio.volume = (myslider.value / 100);
+        myslidertxt.innerText = myslider.value + '%';
+    }
+
+    if(soundok)
+    {
+        myaudio.play();
+        myaudio.loop = true;
+    }
+    else 
+    {
+        myaudio.volume = 0;
+    }
+}
+
+myspeakerbtn.addEventListener('click', function(){
+    soundok = false;
+    myspeakerbtn.style.display = 'none';
+    mymutebtn.style.display = 'inline-block';
+})
+
+mymutebtn.addEventListener('click', function(){
+    soundok = true;
+    myspeakerbtn.style.display = 'inline-block';
+    mymutebtn.style.display = 'none';
+})
+
+
 console.log(myname);
 mynametxt.innerText = myname;
 
@@ -148,6 +191,7 @@ let fighttimer = window.setInterval(function() {
 // comme un Update() en C# (s'actualise toute les secondes)
 let updatetimer = window.setInterval(function(){
     lvlup()
+    audioplay()
 })
 
 // var de mes boutons besoins
