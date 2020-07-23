@@ -1,0 +1,25 @@
+{
+  "name": "TP4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/guillaume.buisson.simplon/tp4_tamagochi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/guillaume.buisson.simplon/tp4_tamagochi/issues"
+  },
+  "homepage": "https://gitlab.com/guillaume.buisson.simplon/tp4_tamagochi#readme",
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}

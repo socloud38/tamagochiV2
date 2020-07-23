@@ -1,424 +1,379 @@
 @import url(//db.onlinewebfonts.com/c/12420e8c141ca7c3dff41de2d59df13e?family=BeaufortforLOL-Bold);
 
-@font-face {font-family: "BeaufortforLOL-Bold"; src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot"); src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); } 
+@font-face { font-family: "BeaufortforLOL-Bold"; src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot"); src: url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.woff") format("woff"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/12420e8c141ca7c3dff41de2d59df13e.svg#BeaufortforLOL-Bold") format("svg"); }
 
-body 
-{
-    background-image: url(../imgs/fond01.jpg);
-    user-select: none;
-    font-family: "BeaufortforLOL-Bold";
+body {
+  background-image: url(../imgs/fond01.jpg);
+  user-select: none;
+  font-family: "BeaufortforLOL-Bold";
 }
 
 // Css index
 
-.bg-fond
-{
-    height: 637px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bg-fond {
+  height: 637px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.bg-fond2
-{
-    height: 600px;
-    width: 30%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border: 3px solid rgb(70, 0, 70);
-    border-radius: 30%;
-    background-image: url(../imgs/mini-legend-bg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.bg-fond2 {
+  height: 600px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgb(70, 0, 70);
+  border-radius: 30%;
+  background-image: url(../imgs/mini-legend-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-#console-alerte 
-{
-    span
-    {
-        color: red;
-    }
+#console-alerte {
+  span {
+    color: red;
+  }
 }
 
-.clique-txt
-{
-    padding-bottom: 10px;
+.clique-txt {
+  padding-bottom: 10px;
+  color: white;
+  font-size: 30px;
+  border-bottom: 2px solid white;
+  border-top-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+}
+
+.clique-txt2 {
+  padding-bottom: 10px;
+  color: white;
+  font-size: 25px;
+}
+
+.my-perso-btn {
+  width: 150px;
+  font-size: 25px;
+  background-color: rgb(116, 116, 253);
+  border: 2px solid blue;
+  border-top-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: blue;
     color: white;
     font-size: 30px;
-    border-bottom: 2px solid white;
-    border-top-left-radius: 40%;
-    border-bottom-right-radius: 40%;
-    
+    border-top-left-radius: 0%;
+    border-bottom-right-radius: 0%;
+  }
 }
 
-.clique-txt2 
-{
-    padding-bottom: 10px;
+#eggclick {
+  /* Animation css */
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
+}
+
+.my-perso-input {
+  font-size: 25px;
+  text-align: center;
+  border: 2px solid blue;
+  background-color: rgb(116, 116, 253);
+
+  &:focus {
+    background-color: blue;
+    border: 2px solid blue;
     color: white;
     font-size: 25px;
-}
-
-.my-perso-btn
-{
-    width: 150px;
-    font-size: 25px;
-    background-color: rgb(116, 116, 253);
-    border: 2px solid blue;
-    border-top-left-radius: 40%;
-    border-bottom-right-radius: 40%;
-    transition: 0.5s;
-
-    &:hover 
-    {
-        background-color: blue;
-        color: white;
-        font-size: 30px;
-        border-top-left-radius: 0%;
-        border-bottom-right-radius: 0%;
-
-    }
-}
-
-#eggclick 
-{
-    /* Animation css */
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-    animation-iteration-count: infinite;
-}
-
-.my-perso-input 
-{
-    font-size: 25px;
     text-align: center;
-    border: 2px solid blue;
-    background-color: rgb(116, 116, 253);
-    &:focus 
-    {
-        background-color: blue;
-        border: 2px solid blue;
-        color: white;
-        font-size: 25px;
-        text-align: center;
-        box-shadow: 0px 0px 15px 5px blue;
-    }
+    box-shadow: 0 0 15px 5px blue;
+  }
 }
 
 // Css game
-.canvas-game
-{
-    height: 740px;
-    background-color: rgba(0, 0, 0, 0.623);
-    text-align: center;
-    display: table-cell;
-    vertical-align: middle;
-    color: white;
+.canvas-game {
+  height: 740px;
+  background-color: rgba(0, 0, 0, 0.623);
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  color: white;
 
-    p 
-    {
-        font-size: 30px;
-    }
+  p {
+    font-size: 30px;
+  }
 }
 
-.box-template
-{
-    background-color: rgba(59, 57, 57, 0.616);
-    color: white;
-
+.box-template {
+  background-color: rgba(59, 57, 57, 0.616);
+  color: white;
 }
 
-.my-list
-{
-    padding-bottom: 50px;
+.my-list {
+  padding-bottom: 50px;
 }
 
-.my-char
-{
-    width: 20%;
+.my-char {
+  width: 20%;
 
-        /* Animation css */
-        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-        transform: translate3d(0, 0, 0);
-        backface-visibility: hidden;
-        perspective: 1000px;
-        animation-iteration-count: infinite;
+  /* Animation css */
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  animation-iteration-count: infinite;
 }
 
 /* Animation css */
 @keyframes shake {
-    10%, 90% {
-      transform: translate3d(-1px, 0, 0);
-    }
-    
-    20%, 80% {
-      transform: translate3d(2px, 0, 0);
-    }
-  
-    30%, 50%, 70% {
-      transform: translate3d(-4px, 0, 0);
-    }
-  
-    40%, 60% {
-      transform: translate3d(4px, 0, 0);
-    }
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
 
 //btns besoins css
-.my-btn
-{
-    width: 10%;
-    height: 100%;
-    background-image: url(../imgs/fond01.jpg);
+.my-btn {
+  width: 10%;
+  height: 100%;
+  background-image: url(../imgs/fond01.jpg);
 
-    &:hover
-    {
-        background: rgba(0, 0, 0, 0.5);
-    }
+  &:hover {
+    background: rgba(0, 0, 0, 0.5);
+  }
 }
-
 
 //css boutons/slider audio
-.my-btn2
-{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    border: none;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url(../imgs/iconelolo50.png);
-    background-position: center;
-    background-size: contain;
-    opacity: 0.7;
+.my-btn2 {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: url(../imgs/iconelolo50.png);
+  background-position: center;
+  background-size: contain;
+  opacity: 0.7;
 
-    &:hover 
-    {
-        opacity: 1;
-    }
+  &:hover {
+    opacity: 1;
+  }
 
-    img 
-    {
-        width: 100%;
-    }
-
+  img {
+    width: 100%;
+  }
 }
 
-.my-slide
-{
-    -webkit-appearance: none;  /* Override default CSS styles */
-    transition: 0.3s; /* 0.2 seconds transition on hover */
-    height: 20px;
-    opacity: 0.7;
-    background-image: url(../imgs/sliderfondlol.png);
+.my-slide {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  transition: 0.3s; /* 0.2 seconds transition on hover */
+  height: 20px;
+  opacity: 0.7;
+  background-image: url(../imgs/sliderfondlol.png);
+  background-position: center;
+  background-size: contain;
+  background-color: rgba(70, 0, 70, 0);
+  border: none;
+  box-shadow: none;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid #000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d; /* Add cool effects to your sliders! */
+  }
+
+  &::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+    border: 1px solid #000;
+    height: 30px;
+    width: 30px;
+    border-radius: 3px;
+    background-image: url(../imgs/iconelol.png);
     background-position: center;
     background-size: contain;
     background-color: rgba(70, 0, 70, 0);
     border: none;
     box-shadow: none;
+    cursor: pointer;
+  }
 
-    &:hover 
-    {
-        opacity: 1;
-    }
-
-    &:focus 
-    {
-        outline: none;
-    }
-
-    &::-webkit-slider-thumb {
-        -webkit-appearance: none;
-        border: 1px solid #000000;
-        height: 36px;
-        width: 16px;
-        border-radius: 3px;
-        background: #ffffff;
-        cursor: pointer;
-        margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
-      }
-
-    &::-moz-range-thumb {
-        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-        border: 1px solid #000000;
-        height: 30px;
-        width: 30px;
-        border-radius: 3px;
-        background-image: url(../imgs/iconelol.png);
-        background-position: center;
-        background-size: contain;
-        background-color: rgba(70, 0, 70, 0);
-        border: none;
-        box-shadow: none;
-        cursor: pointer;
-      }
-
-    &::-ms-thumb {
-        box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-        border: 1px solid #000000;
-        height: 36px;
-        width: 16px;
-        border-radius: 3px;
-        background: #ffffff;
-        cursor: pointer;
-      }
+  &::-ms-thumb {
+    box-shadow: 1px 1px 1px #000, 0 0 1px #0d0d0d;
+    border: 1px solid #000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #fff;
+    cursor: pointer;
+  }
 }
 
-.audio-options
-{
-    display: flex;
-    align-items: center;
-    justify-content: left;
+.audio-options {
+  display: flex;
+  align-items: center;
+  justify-content: left;
 }
-
 
 //css console
-.my-console 
-{
-    width: 100%;
-    height: 200px;
-    background-color: black;
-    overflow: hidden;
+.my-console {
+  width: 100%;
+  height: 200px;
+  background-color: black;
+  overflow: hidden;
 
-    p 
-    {
-        color: rgb(71, 71, 71);
-        margin: 0px;
-        font-size: 12px;
-    }
+  p {
+    color: rgb(71, 71, 71);
+    margin: 0;
+    font-size: 12px;
+  }
 }
 
-.my-input-csl
-{
-    background-color: rgb(54, 54, 54);
-    border: 2px solid rgb(54, 54, 54);
-    color: white;
+.my-input-csl {
+  background-color: rgb(54, 54, 54);
+  border: 2px solid rgb(54, 54, 54);
+  color: white;
 
-
-    &:hover 
-    {
-        background-color: rgba(54, 54, 54, 0.5)
-    }
+  &:hover {
+    background-color: rgba(54, 54, 54, 0.5);
+  }
 }
 
-#btn-console 
-{
-    position: absolute;
-    right: 10px;
+#btn-console {
+  position: absolute;
+  right: 10px;
 }
 
 //css jauges
-.bg-jauges
-{
+.bg-jauges {
+  height: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.bg-jauges2 {
+  height: 45px;
+  width: 100%;
+  margin-left: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+}
+
+.my-jauges {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 10%;
+  }
+
+  .jauges {
+    transition: 2s;
+    margin-right: 10px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    background-image: url(../imgs/texturebesoin.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+.my-jauge-xp {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  img {
+    width: 10%;
+  }
+
+  p {
+    width: 100%;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: black;
+  }
+
+  .jauge-xp {
+    width: 100%;
     height: 20px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    transition: 2s;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
+    margin-bottom: 20px;
+    background-image: url(../imgs/texturexp.webp);
+  }
 }
 
-.bg-jauges2 
-{
-    height: 45px;
-    width: 100%;
-    margin-left: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
-}
-
-.my-jauges
-{
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    img 
-    {
-        width: 10%;
-    }
-
-    .jauges 
-    {
-        transition: 2s;
-        margin-right: 10px;
-        border-top-right-radius: 100px;
-        border-bottom-right-radius: 100px;
-        background-image: url(../imgs/texturebesoin.jpg);
-        background-position:center;
-        background-size: cover;
-    }
-}
-
-.my-jauge-xp
-{
-    margin-left: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    img 
-    {
-        width: 10%;
-    }
-
-    p 
-    {
-        width: 100%;
-        margin-bottom: 0px;
-        font-size: 16px;
-        color: black;
-    }
-
-    .jauge-xp 
-    {
-        width: 100%;
-        height: 20px;
-        transition: 2s;
-        border-top-right-radius: 100px;
-        border-bottom-right-radius: 100px;
-        margin-bottom: 20px;
-        background-image: url(../imgs/texturexp.webp);
-    }
-}
-
-.icone-10
-{
-    width: 70%;
+.icone-10 {
+  width: 70%;
 }
 
 // Css defeatscreen
 
-.bg-defeat
-{
-    height: 637px;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.bg-defeat {
+  height: 637px;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    h2
-    {
-        color: white;
-    }
+  h2 {
+    color: white;
+  }
 }
 
-.bg-defeat-2
-{
-    height: 300px;
-    width: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 25%;
+.bg-defeat-2 {
+  height: 300px;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 25%;
 
-    img 
-    {
-        margin-left: 80px;
-    }
+  img {
+    margin-left: 80px;
+  }
 }
